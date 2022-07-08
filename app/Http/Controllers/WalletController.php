@@ -235,8 +235,8 @@ class WalletController extends Controller
             $account = $this->sdk->requestAccount($wallet->public);
             $sourcePair = KeyPair::fromSeed($wallet->secret);
 
-            $assetCode = 'ANSR';
-            $assetIssuer = 'GAEQFO7DDXQCJ4REZX6M6ULRNCI7WBXTJPMJRRWZQBA3C5T3LAWL7CQO';
+            $assetCode = '';
+            $assetIssuer = '';
             $asset = new AssetTypeCreditAlphanum4($assetCode, $assetIssuer);
             // Payment Operation
             $paymentOperation = (new PaymentOperationBuilder($mainPair->getAccountId(), $asset, $amount))->build();
@@ -313,8 +313,8 @@ class WalletController extends Controller
             $mainAccount = $this->sdk->requestAccount($mainPair->getAccountId());
             $account = $this->sdk->requestAccount($invest->public);
 
-            $assetCode = 'ANSR';
-            $assetIssuer = 'GAEQFO7DDXQCJ4REZX6M6ULRNCI7WBXTJPMJRRWZQBA3C5T3LAWL7CQO';
+            $assetCode = '';
+            $assetIssuer = '';
             $asset = new AssetTypeCreditAlphanum4($assetCode, $assetIssuer);
             // Payment Operation
             $paymentOperation = (new PaymentOperationBuilder($account->getAccountId(), $asset, $amount))->build();
